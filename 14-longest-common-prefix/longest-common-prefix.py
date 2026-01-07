@@ -12,14 +12,15 @@ class Solution:
         #         if s[i] != sortest[i]:
         #             return sortest[:i]
         # return sortest
+        if not strs:
+            return ""
         
         min_strs = min(strs)
         max_strs= max(strs)
-        prefix= []
         i=0
         while i<len(min_strs) and i<len(max_strs) and min_strs[i] == max_strs[i]:
-            prefix.append(min_strs[i])
+            
             i +=1
-        return "".join(prefix)
+        return min_strs[:i]
 
         
